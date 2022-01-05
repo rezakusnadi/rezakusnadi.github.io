@@ -10,7 +10,11 @@ section
 
 .hero
 {
-    background-color: #0f2324;
+    background-image: linear-gradient(rgba(19, 18, 18, 0.1), rgba(58, 48, 48, 0.1)),
+    url('./image/dirk-von-loen-wagner-Hrmayke-v8g-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     color: white;
     font-size: 40px;
@@ -107,7 +111,7 @@ p
 
 .button:hover
 {
-    background-color: black;
+    background-color: rgb(36, 34, 34);
 }
 
 .button:active {
