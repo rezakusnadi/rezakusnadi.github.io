@@ -8,6 +8,8 @@ section
     background-color: white;
 }
 
+
+/*--header--*/
 .hero
 {
     background-image: linear-gradient(rgba(19, 18, 18, 0.1), rgba(58, 48, 48, 0.1)),
@@ -69,13 +71,9 @@ li
 
 h1
 {
-    font-size: 70px;
+    font-size: 80px;
+    font-weight: 500;
     margin: 0;
-}
-
-h2
-{
-    font-size: 50px;
 }
 
 p
@@ -91,6 +89,7 @@ p
     font-weight: 300;
 }
 
+
 .social
 {
     padding-bottom: 200px;
@@ -105,52 +104,57 @@ p
     text-align: center;
     font-size: 30px;
     font-weight: 300;
-    padding-top: 5px;
+    padding-top: 6px;
     margin-top: 20px;
+    transition: all 0.2s;
+    border: 1px solid  var(--black);
+}
+
+
+.button:hover
+{
+    background-color: rgb(84, 79, 79);
+}
+
+.button:active {
+    background-color: rgb(84, 79, 79);
+    color: rgb(84, 79, 79);
+}
+
+.button::after
+{
+    display: none;
+}
+
+
+.button:focus {
+    outline: none;
+}
+
+.button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
 }
 
 .button:hover
 {
-    background-color: rgb(36, 34, 34);
+    background: rgb(24, 21, 21);
 }
 
-.button:active {
-    background-color: #A9A9A9;
-    color: #808080;
-}
 
 .sociallogo
 {
     margin: 20px;
 }
 
-.sub-section
-{
-    display: flex;
-    justify-content: space-around;
-    padding: 80px;
-}
-
-.sub-section2
-{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 80px;
-}
-
-.foto
-{
-    width: 300px;
-    border-radius: 150px;
-    margin-left: 80px;
-}
-
-.tempat-foto
-{
-    display: flex;
-    align-items: center;
-}
 
 .projectcard
 {
@@ -160,6 +164,13 @@ p
     margin: 10px;
 }
 
+.sub-section2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
 
 .tempatproject
 {
@@ -202,52 +213,8 @@ a
     color: white;
 }
 
-/* .hamburger
-{
-    display: none;
-}
+/*--navigasi--*/
 
-.hamburger:focus
-{
-    outline: 0;
-}
-
-@media only screen and (max-width: 1000px)
-{
-    .hamburger
-    {
-        display: block;
-        border: 0;
-        background-color: transparent;
-        color: white;
-        font-size: 30px;
-        margin: 20px;
-        align-self: flex-end;
-    }
-
-    ul 
-    {
-        display: none;
-        background-color: #0f2324;
-        margin: 0ppx;
-    }
-    
-    nav
-    {
-        display: flex;
-        flex-direction: column-reverse;
-        background-color: #0f2324;
-    }
-
-    .logo
-    {
-        display: none;
-    }
-}
- */
-
-
-/*--Nav Bar--*/
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -322,4 +289,126 @@ a
     --white: #fcfbfc;
 
     --border-light: 1px solid rgb(36, 35, 35);
+}
+
+/*--scroll--*/
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*-- Back to Top --*/
+
+.back-to-top {
+    position:fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.back-to-top__image {
+    height: 80%;
+}
+
+@media(max-width: 500px) {
+    .back-to-top {
+        right: 2rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .back-to-top {
+        right: 1rem;
+    }
+}
+
+/*--about--*/
+
+
+.btn
+{
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    width: 300px;
+    height: 55px;
+    font-size: 30px;
+    font-weight: 250;
+    color: black;
+}
+
+.btn:hover
+{
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+}
+
+.btn:active {
+    color: #808080;
+}
+
+h2
+{
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.sub-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+@media(max-width: 900px)
+{
+    .sub-section
+    {
+        flex-direction:column-reverse;
+        align-items: initial;
+        justify-content: space-around;
+        padding: 80px;
+    }
+
+    h2
+    {
+        font-size: 30px;
+        margin-top: 0;
+    }
+}
+
+
+.foto
+{
+    width: 300px;
+    border-radius: 150px;
+    margin-left: 80px;
+}
+
+@media(min-width: 900) {
+    .text {
+        flex: 0 0 35%;
+    }
+    
+    .foto
+    {
+        width: 300px;
+        border-radius: 150px;
+        margin-left: 80px;
+    }
+
+    .tempat-foto
+    {
+        display: flex;
+        align-items: center;
+    }
 }
