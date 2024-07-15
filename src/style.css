@@ -153,6 +153,7 @@ p
 .sociallogo
 {
     margin: 20px;
+    padding-right: 20px;
 }
 
 
@@ -224,6 +225,7 @@ a
 .nav__items {
     display: flex;
     list-style: none;
+    padding-right: 38px;
 }
 
 .nav__item:not(:last-child) {
